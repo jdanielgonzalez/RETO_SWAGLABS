@@ -1,0 +1,449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">soap service example</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="83f6679d20705c4d2fe60d958c7694f289478bda7a9f3a9ac9cbf7ba86966dfb.html">Login</a></span>
+                > <span class="truncate-60"><a
+                    href="437870b4df54936ad04de6ceb98b40cdb97a85ec6dd56f5287ea9ff455548fa9.html">login incorrecto </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 31-10-2021 14:12</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Login </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                yo como usuario<br />
+quiero ingresar a la aplicacion<br />
+para comprar productos
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="error-color">login incorrecto
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given estoy en la pagina<br>When ingreso un usuario y una password<br><table class='embedded'><thead><th>user</th><th>&lt;user&gt;</th></thead><tbody><tr><td>user</td><td>&lt;password&gt;</td></tr></tbody></table><br>Then debo ver un mensaje</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Assertion error: chrome not reachable</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>co.com.sofka.stepdefinition.login.LoginStepDefinition.debo_ver_un_mensaje(LoginStepDefinition.java:49)<br />✽.debo ver un mensaje(file:///D:/DANIEL/Sofka/Automaización%20de%20pruebas/reto%20manuel/src/test/resources/features/login/login.feature:11)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="#" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="a8fd6ded05954b9049ffbb7e32249db53abf191e7939710e56449b06d210a1d6.png" title=" Example: {user=standard_user, password=wrongpassword}" width="1366"/>
+                <img src="a8fd6ded05954b9049ffbb7e32249db53abf191e7939710e56449b06d210a1d6.png" title=" Given estoy en la pagina" width="1366"/>
+                <img src="a8fd6ded05954b9049ffbb7e32249db53abf191e7939710e56449b06d210a1d6.png" title=" Chillin open landing page task" width="1366"/>
+                <img src="a8fd6ded05954b9049ffbb7e32249db53abf191e7939710e56449b06d210a1d6.png" title=" chillin opens the Landing page" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" chillin opens the Landing page (completed)" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" Chillin open landing page task (completed)" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" Given estoy en la pagina (completed)" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" When ingreso un usuario y una password
+| user | standard_user |
+| user | wrongpassword |" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" Chillin do login task" width="1366"/>
+                <img src="e4973b910b803d1fe85c0edce4cd82f4b3a7a4d4ad1fb470c31ece7161f34e1b.png" title=" chillin clears field user name" width="1366"/>
+                <img src="c7607aec070cdf393abafb2d178df85c57514803549a5e1766566c92ac528248.png" title=" chillin clears field user name (completed)" width="1366"/>
+                <img src="c7607aec070cdf393abafb2d178df85c57514803549a5e1766566c92ac528248.png" title=" chillin enters 'standard_user' into user name" width="1366"/>
+                <img src="02ecd4a1aa721c380ec8270928b7b0396afc150b5200ccd23c709f276cf4bad5.png" title=" chillin enters 'standard_user' into user name (completed)" width="1366"/>
+                <img src="ffe47e31cd4ac81ca459faf804ef6bb534a7a60e05429f6a66718557aedbc3ea.png" title=" chillin clears field password" width="1366"/>
+                <img src="53c4a9e85895db8db796d9c734eb0232da6e50f6b61b2c4d86ade3160337ee27.png" title=" chillin clears field password (completed)" width="1366"/>
+                <img src="53c4a9e85895db8db796d9c734eb0232da6e50f6b61b2c4d86ade3160337ee27.png" title=" chillin enters 'wrongpassword' into password" width="1366"/>
+                <img src="4ce1d863f5821820051e039328e7104d839f66089d1454626d83d3ab3a3d0bf3.png" title=" chillin enters 'wrongpassword' into password (completed)" width="1366"/>
+                <img src="e4e367262634687847f1c46bd2a5af47f6df8d903faa394cd00ea37a5d80164e.png" title=" chillin clicks on button login" width="1366"/>
+                <img src="51f2ee133ac5df9066b0bb103839f9c56a95176a857b124ea2c9e3ae402c50c8.png" title=" Chillin do login task" width="1366"/>
+                <img src="51f2ee133ac5df9066b0bb103839f9c56a95176a857b124ea2c9e3ae402c50c8.png" title=" chillin clicks on button login (completed)" width="1366"/>
+                <img src="51f2ee133ac5df9066b0bb103839f9c56a95176a857b124ea2c9e3ae402c50c8.png" title=" When ingreso un usuario y una password
+| user | standard_user |
+| user | wrongpassword | (completed)" width="1366"/>
+                <img src="51f2ee133ac5df9066b0bb103839f9c56a95176a857b124ea2c9e3ae402c50c8.png" title=" Then debo ver un mensaje" width="1366"/>
+                <img src="51f2ee133ac5df9066b0bb103839f9c56a95176a857b124ea2c9e3ae402c50c8.png" title=" Then login question should be (true)" width="1366"/>
+                <img src="51f2ee133ac5df9066b0bb103839f9c56a95176a857b124ea2c9e3ae402c50c8.png" title=" Then debo ver un mensaje" width="1366"/>
+                <img src="51f2ee133ac5df9066b0bb103839f9c56a95176a857b124ea2c9e3ae402c50c8.png" title=" Then login question should be (true) (completed)" width="1366"/>
+                <img src="51f2ee133ac5df9066b0bb103839f9c56a95176a857b124ea2c9e3ae402c50c8.png" title=" Example: {user=standard_user, password=wrongpassword} (completed)" width="1366"/>
+                <img src="a8fd6ded05954b9049ffbb7e32249db53abf191e7939710e56449b06d210a1d6.png" title=" Example: {user=locked_out_user, password=secret_sauce}" width="1366"/>
+                <img src="a8fd6ded05954b9049ffbb7e32249db53abf191e7939710e56449b06d210a1d6.png" title=" Given estoy en la pagina" width="1366"/>
+                <img src="a8fd6ded05954b9049ffbb7e32249db53abf191e7939710e56449b06d210a1d6.png" title=" Chillin open landing page task" width="1366"/>
+                <img src="a8fd6ded05954b9049ffbb7e32249db53abf191e7939710e56449b06d210a1d6.png" title=" chillin opens the Landing page" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" chillin opens the Landing page (completed)" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" Chillin open landing page task (completed)" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" Given estoy en la pagina (completed)" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" When ingreso un usuario y una password
+| user | locked_out_user |
+| user | secret_sauce |" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" Chillin do login task" width="1366"/>
+                <img src="e4973b910b803d1fe85c0edce4cd82f4b3a7a4d4ad1fb470c31ece7161f34e1b.png" title=" chillin clears field user name" width="1366"/>
+                <img src="c7607aec070cdf393abafb2d178df85c57514803549a5e1766566c92ac528248.png" title=" chillin clears field user name (completed)" width="1366"/>
+                <img src="c7607aec070cdf393abafb2d178df85c57514803549a5e1766566c92ac528248.png" title=" chillin enters 'locked_out_user' into user name" width="1366"/>
+                <img src="f2b44f94fafc05dc803c15042d6ad63b759b1309c10763a1573d8a8dcd794214.png" title=" chillin enters 'locked_out_user' into user name (completed)" width="1366"/>
+                <img src="bd193f92612b1b0b5b3f21dacee97657e17bf01886a6d3704613be52044f7d96.png" title=" chillin clears field password" width="1366"/>
+                <img src="a2074f2878e7142b0637db74401b9cec3a584ec0c4187013ae581dd33e25d81c.png" title=" chillin clears field password (completed)" width="1366"/>
+                <img src="a2074f2878e7142b0637db74401b9cec3a584ec0c4187013ae581dd33e25d81c.png" title=" chillin enters 'secret_sauce' into password" width="1366"/>
+                <img src="207467868676abddaa898fdc5dbb3be0d9637f99c9652236071648e5e91d63bb.png" title=" chillin enters 'secret_sauce' into password (completed)" width="1366"/>
+                <img src="207467868676abddaa898fdc5dbb3be0d9637f99c9652236071648e5e91d63bb.png" title=" chillin clicks on button login" width="1366"/>
+                <img src="5c4c9600be4d806ce03e6e80b566afd52ab4b1d75b5f4e971f04c196b4811469.png" title=" chillin clicks on button login (completed)" width="1366"/>
+                <img src="5c4c9600be4d806ce03e6e80b566afd52ab4b1d75b5f4e971f04c196b4811469.png" title=" Chillin do login task (completed)" width="1366"/>
+                <img src="5c4c9600be4d806ce03e6e80b566afd52ab4b1d75b5f4e971f04c196b4811469.png" title=" When ingreso un usuario y una password
+| user | locked_out_user |
+| user | secret_sauce | (completed)" width="1366"/>
+                <img src="5c4c9600be4d806ce03e6e80b566afd52ab4b1d75b5f4e971f04c196b4811469.png" title=" Then debo ver un mensaje" width="1366"/>
+                <img src="5c4c9600be4d806ce03e6e80b566afd52ab4b1d75b5f4e971f04c196b4811469.png" title=" Then login question should be (true)" width="1366"/>
+                <img src="5c4c9600be4d806ce03e6e80b566afd52ab4b1d75b5f4e971f04c196b4811469.png" title=" Then login question should be (true) (completed)" width="1366"/>
+                <img src="5c4c9600be4d806ce03e6e80b566afd52ab4b1d75b5f4e971f04c196b4811469.png" title=" Then debo ver un mensaje (completed)" width="1366"/>
+                <img src="5c4c9600be4d806ce03e6e80b566afd52ab4b1d75b5f4e971f04c196b4811469.png" title=" Example: {user=locked_out_user, password=secret_sauce} (completed)" width="1366"/>
+                <img src="a8fd6ded05954b9049ffbb7e32249db53abf191e7939710e56449b06d210a1d6.png" title=" Example: {user=problem_user, password=wrongpassword}" width="1366"/>
+                <img src="a8fd6ded05954b9049ffbb7e32249db53abf191e7939710e56449b06d210a1d6.png" title=" Given estoy en la pagina" width="1366"/>
+                <img src="a8fd6ded05954b9049ffbb7e32249db53abf191e7939710e56449b06d210a1d6.png" title=" Chillin open landing page task" width="1366"/>
+                <img src="a8fd6ded05954b9049ffbb7e32249db53abf191e7939710e56449b06d210a1d6.png" title=" chillin opens the Landing page" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" Chillin open landing page task" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" chillin opens the Landing page (completed)" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" Given estoy en la pagina (completed)" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" When ingreso un usuario y una password
+| user | problem_user |
+| user | wrongpassword |" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" Chillin do login task" width="1366"/>
+                <img src="e4973b910b803d1fe85c0edce4cd82f4b3a7a4d4ad1fb470c31ece7161f34e1b.png" title=" chillin clears field user name" width="1366"/>
+                <img src="c7607aec070cdf393abafb2d178df85c57514803549a5e1766566c92ac528248.png" title=" chillin clears field user name (completed)" width="1366"/>
+                <img src="c7607aec070cdf393abafb2d178df85c57514803549a5e1766566c92ac528248.png" title=" chillin enters 'problem_user' into user name" width="1366"/>
+                <img src="6007f5ded6bd5d2a2ca7f5b477ff27c4fb04e717c4085a3efc1fb35b7987cac9.png" title=" chillin enters 'problem_user' into user name (completed)" width="1366"/>
+                <img src="6007f5ded6bd5d2a2ca7f5b477ff27c4fb04e717c4085a3efc1fb35b7987cac9.png" title=" chillin clears field password" width="1366"/>
+                <img src="5f18e7574bac3939c52b9d199652ad6dea4799d409a48625f1fef80b5d847eec.png" title=" chillin clears field password (completed)" width="1366"/>
+                <img src="5f18e7574bac3939c52b9d199652ad6dea4799d409a48625f1fef80b5d847eec.png" title=" chillin enters 'wrongpassword' into password" width="1366"/>
+                <img src="faea645e9f57cc583c495ac5ab1be513121faa698d00419d3111decb5123a759.png" title=" chillin enters 'wrongpassword' into password (completed)" width="1366"/>
+                <img src="835cb956c91cecb1dc1b34130959977844a3fa43bf0553356648e447f1b48839.png" title=" chillin clicks on button login" width="1366"/>
+                <img src="a463271450f1480c96fbbf3eab85797d8d8de70dee90fc6efc7b166d1d5fb346.png" title=" chillin clicks on button login (completed)" width="1366"/>
+                <img src="a463271450f1480c96fbbf3eab85797d8d8de70dee90fc6efc7b166d1d5fb346.png" title=" Chillin do login task (completed)" width="1366"/>
+                <img src="a463271450f1480c96fbbf3eab85797d8d8de70dee90fc6efc7b166d1d5fb346.png" title=" When ingreso un usuario y una password
+| user | problem_user |
+| user | wrongpassword | (completed)" width="1366"/>
+                <img src="a463271450f1480c96fbbf3eab85797d8d8de70dee90fc6efc7b166d1d5fb346.png" title=" Then debo ver un mensaje" width="1366"/>
+                <img src="a463271450f1480c96fbbf3eab85797d8d8de70dee90fc6efc7b166d1d5fb346.png" title=" Then login question should be (true)" width="1366"/>
+                <img src="a463271450f1480c96fbbf3eab85797d8d8de70dee90fc6efc7b166d1d5fb346.png" title=" Then debo ver un mensaje" width="1366"/>
+                <img src="a463271450f1480c96fbbf3eab85797d8d8de70dee90fc6efc7b166d1d5fb346.png" title=" Then login question should be (true) (completed)" width="1366"/>
+                <img src="a463271450f1480c96fbbf3eab85797d8d8de70dee90fc6efc7b166d1d5fb346.png" title=" Example: {user=problem_user, password=wrongpassword} (completed)" width="1366"/>
+                <img src="a8fd6ded05954b9049ffbb7e32249db53abf191e7939710e56449b06d210a1d6.png" title=" Example: {user=performance_glitch_user, password=wrongpassword}" width="1366"/>
+                <img src="a8fd6ded05954b9049ffbb7e32249db53abf191e7939710e56449b06d210a1d6.png" title=" Given estoy en la pagina" width="1366"/>
+                <img src="a8fd6ded05954b9049ffbb7e32249db53abf191e7939710e56449b06d210a1d6.png" title=" Chillin open landing page task" width="1366"/>
+                <img src="a8fd6ded05954b9049ffbb7e32249db53abf191e7939710e56449b06d210a1d6.png" title=" chillin opens the Landing page" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" chillin opens the Landing page (completed)" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" Chillin open landing page task (completed)" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" Given estoy en la pagina (completed)" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" When ingreso un usuario y una password
+| user | performance_glitch_user |
+| user | wrongpassword |" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" Chillin do login task" width="1366"/>
+                <img src="e4973b910b803d1fe85c0edce4cd82f4b3a7a4d4ad1fb470c31ece7161f34e1b.png" title=" chillin clears field user name" width="1366"/>
+                <img src="c7607aec070cdf393abafb2d178df85c57514803549a5e1766566c92ac528248.png" title=" chillin clears field user name (completed)" width="1366"/>
+                <img src="c7607aec070cdf393abafb2d178df85c57514803549a5e1766566c92ac528248.png" title=" chillin enters 'performance_glitch_user' into user name" width="1366"/>
+                <img src="d6491f3379bd4fdaa3d32d0c0cf56bfd8dc87ad033765c38020d570e32428111.png" title=" chillin enters 'performance_glitch_user' into user name (completed)" width="1366"/>
+                <img src="025c694e5930b2a6beab6fd056e54fff8855a51df8594570a37e98e92bc01aa4.png" title=" chillin clears field password" width="1366"/>
+                <img src="3e73762ca7ba38d393fcfd75c3c401152ef16eaf43f5102a166eebcfd67572a4.png" title=" chillin clears field password (completed)" width="1366"/>
+                <img src="3e73762ca7ba38d393fcfd75c3c401152ef16eaf43f5102a166eebcfd67572a4.png" title=" chillin enters 'wrongpassword' into password" width="1366"/>
+                <img src="c21d760cb8790613e99035e943a410a467a13d0b42885bbed5e634941082ef52.png" title=" chillin enters 'wrongpassword' into password (completed)" width="1366"/>
+                <img src="1808afad92572bff938a3418bfb1da496897f5a9a4f2a6c3f52928a20e1fdb5a.png" title=" chillin clicks on button login" width="1366"/>
+                <img src="d4acc6b1e1f100e70ef73eea19cb49cb1d3f7820f7ff2b3162718abfbc6dc87f.png" title=" chillin clicks on button login (completed)" width="1366"/>
+                <img src="d4acc6b1e1f100e70ef73eea19cb49cb1d3f7820f7ff2b3162718abfbc6dc87f.png" title=" Chillin do login task (completed)" width="1366"/>
+                <img src="d4acc6b1e1f100e70ef73eea19cb49cb1d3f7820f7ff2b3162718abfbc6dc87f.png" title=" When ingreso un usuario y una password
+| user | performance_glitch_user |
+| user | wrongpassword | (completed)" width="1366"/>
+                <img src="d4acc6b1e1f100e70ef73eea19cb49cb1d3f7820f7ff2b3162718abfbc6dc87f.png" title=" Then debo ver un mensaje" width="1366"/>
+                <img src="d4acc6b1e1f100e70ef73eea19cb49cb1d3f7820f7ff2b3162718abfbc6dc87f.png" title=" Then login question should be (true)" width="1366"/>
+                <img src="d4acc6b1e1f100e70ef73eea19cb49cb1d3f7820f7ff2b3162718abfbc6dc87f.png" title=" Then debo ver un mensaje" width="1366"/>
+                <img src="d4acc6b1e1f100e70ef73eea19cb49cb1d3f7820f7ff2b3162718abfbc6dc87f.png" title=" Then login question should be (true) (completed)" width="1366"/>
+                <img src="d4acc6b1e1f100e70ef73eea19cb49cb1d3f7820f7ff2b3162718abfbc6dc87f.png" title=" Example: {user=performance_glitch_user, password=wrongpassword} (completed)" width="1366"/>
+                <img src="a8fd6ded05954b9049ffbb7e32249db53abf191e7939710e56449b06d210a1d6.png" title=" Example: {user=empty, password=secret_sauce}" width="1366"/>
+                <img src="a8fd6ded05954b9049ffbb7e32249db53abf191e7939710e56449b06d210a1d6.png" title=" Given estoy en la pagina" width="1366"/>
+                <img src="a8fd6ded05954b9049ffbb7e32249db53abf191e7939710e56449b06d210a1d6.png" title=" Chillin open landing page task" width="1366"/>
+                <img src="a8fd6ded05954b9049ffbb7e32249db53abf191e7939710e56449b06d210a1d6.png" title=" chillin opens the Landing page" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" Chillin open landing page task" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" chillin opens the Landing page (completed)" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" Given estoy en la pagina (completed)" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" When ingreso un usuario y una password
+| user | empty |
+| user | secret_sauce |" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" Chillin do login task" width="1366"/>
+                <img src="e4973b910b803d1fe85c0edce4cd82f4b3a7a4d4ad1fb470c31ece7161f34e1b.png" title=" chillin clears field user name" width="1366"/>
+                <img src="c7607aec070cdf393abafb2d178df85c57514803549a5e1766566c92ac528248.png" title=" chillin clears field user name (completed)" width="1366"/>
+                <img src="c7607aec070cdf393abafb2d178df85c57514803549a5e1766566c92ac528248.png" title=" chillin enters '' into user name" width="1366"/>
+                <img src="c7607aec070cdf393abafb2d178df85c57514803549a5e1766566c92ac528248.png" title=" chillin enters '' into user name (completed)" width="1366"/>
+                <img src="e4973b910b803d1fe85c0edce4cd82f4b3a7a4d4ad1fb470c31ece7161f34e1b.png" title=" chillin clears field password" width="1366"/>
+                <img src="c0197f57b474766be5a74f3009e51faeb44250d7abdebe10566e80b064d764ad.png" title=" chillin clears field password (completed)" width="1366"/>
+                <img src="c0197f57b474766be5a74f3009e51faeb44250d7abdebe10566e80b064d764ad.png" title=" chillin enters 'secret_sauce' into password" width="1366"/>
+                <img src="feec559e80e6d07f7dcb32273c8a0c9c356d1077209ff823d8a95de8895e014e.png" title=" chillin enters 'secret_sauce' into password (completed)" width="1366"/>
+                <img src="5c34777c79fc65f786875fbbde9e49e1284a06c6564f3a25f5fd674911fddfcb.png" title=" chillin clicks on button login" width="1366"/>
+                <img src="196926d571fc10abe3cb29c0dfc5fec12f458e3510661997caa9ffdc5fb4f1ec.png" title=" chillin clicks on button login (completed)" width="1366"/>
+                <img src="196926d571fc10abe3cb29c0dfc5fec12f458e3510661997caa9ffdc5fb4f1ec.png" title=" Chillin do login task (completed)" width="1366"/>
+                <img src="196926d571fc10abe3cb29c0dfc5fec12f458e3510661997caa9ffdc5fb4f1ec.png" title=" When ingreso un usuario y una password
+| user | empty |
+| user | secret_sauce | (completed)" width="1366"/>
+                <img src="196926d571fc10abe3cb29c0dfc5fec12f458e3510661997caa9ffdc5fb4f1ec.png" title=" Then debo ver un mensaje" width="1366"/>
+                <img src="196926d571fc10abe3cb29c0dfc5fec12f458e3510661997caa9ffdc5fb4f1ec.png" title=" Then login question should be (true)" width="1366"/>
+                <img src="196926d571fc10abe3cb29c0dfc5fec12f458e3510661997caa9ffdc5fb4f1ec.png" title=" Then login question should be (true) (completed)" width="1366"/>
+                <img src="196926d571fc10abe3cb29c0dfc5fec12f458e3510661997caa9ffdc5fb4f1ec.png" title=" Example: {user=empty, password=secret_sauce}" width="1366"/>
+                <img src="196926d571fc10abe3cb29c0dfc5fec12f458e3510661997caa9ffdc5fb4f1ec.png" title=" Then debo ver un mensaje (completed)" width="1366"/>
+                <img src="a8fd6ded05954b9049ffbb7e32249db53abf191e7939710e56449b06d210a1d6.png" title=" Example: {user=standard_user, password=empty}" width="1366"/>
+                <img src="a8fd6ded05954b9049ffbb7e32249db53abf191e7939710e56449b06d210a1d6.png" title=" Given estoy en la pagina" width="1366"/>
+                <img src="a8fd6ded05954b9049ffbb7e32249db53abf191e7939710e56449b06d210a1d6.png" title=" Chillin open landing page task" width="1366"/>
+                <img src="a8fd6ded05954b9049ffbb7e32249db53abf191e7939710e56449b06d210a1d6.png" title=" chillin opens the Landing page" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" chillin opens the Landing page (completed)" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" Chillin open landing page task (completed)" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" Given estoy en la pagina (completed)" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" When ingreso un usuario y una password
+| user | standard_user |
+| user | empty |" width="1366"/>
+                <img src="c9238ae6a58f6f855dffdd86db26da770bf7ca0dbc664daec778a088d8f1fa29.png" title=" Chillin do login task" width="1366"/>
+                <img src="e4973b910b803d1fe85c0edce4cd82f4b3a7a4d4ad1fb470c31ece7161f34e1b.png" title=" chillin clears field user name" width="1366"/>
+                <img src="c7607aec070cdf393abafb2d178df85c57514803549a5e1766566c92ac528248.png" title=" chillin clears field user name (completed)" width="1366"/>
+                <img src="c7607aec070cdf393abafb2d178df85c57514803549a5e1766566c92ac528248.png" title=" chillin enters 'standard_user' into user name" width="1366"/>
+                <img src="02ecd4a1aa721c380ec8270928b7b0396afc150b5200ccd23c709f276cf4bad5.png" title=" chillin enters 'standard_user' into user name (completed)" width="1366"/>
+                <img src="02ecd4a1aa721c380ec8270928b7b0396afc150b5200ccd23c709f276cf4bad5.png" title=" chillin clears field password" width="1366"/>
+                <img src="53c4a9e85895db8db796d9c734eb0232da6e50f6b61b2c4d86ade3160337ee27.png" title=" chillin clears field password (completed)" width="1366"/>
+                <img src="53c4a9e85895db8db796d9c734eb0232da6e50f6b61b2c4d86ade3160337ee27.png" title=" chillin enters '' into password" width="1366"/>
+                <img src="53c4a9e85895db8db796d9c734eb0232da6e50f6b61b2c4d86ade3160337ee27.png" title=" chillin enters '' into password (completed)" width="1366"/>
+                <img src="ffe47e31cd4ac81ca459faf804ef6bb534a7a60e05429f6a66718557aedbc3ea.png" title=" chillin clicks on button login" width="1366"/>
+                <img src="2a4533ad496f44b4447102dcd4c55699552719e69787073cbc48f4e6b8cf573a.png" title=" Chillin do login task" width="1366"/>
+                <img src="2a4533ad496f44b4447102dcd4c55699552719e69787073cbc48f4e6b8cf573a.png" title=" chillin clicks on button login (completed)" width="1366"/>
+                <img src="2a4533ad496f44b4447102dcd4c55699552719e69787073cbc48f4e6b8cf573a.png" title=" When ingreso un usuario y una password
+| user | standard_user |
+| user | empty | (completed)" width="1366"/>
+                <img src="2a4533ad496f44b4447102dcd4c55699552719e69787073cbc48f4e6b8cf573a.png" title=" Then debo ver un mensaje" width="1366"/>
+                <img src="2a4533ad496f44b4447102dcd4c55699552719e69787073cbc48f4e6b8cf573a.png" title=" Then login question should be (true): <span class='error-color'>ERROR</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.2.9</span>
+</div>
+</body>
+</html>
